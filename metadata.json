@@ -1,0 +1,6 @@
+{
+  "name": "Weather Intelligence App",
+  "description": "Real-time weather insights, 7-day forecast, interactive temperature & precipitation charts, and smart travel recommendations powered by Open-Meteo.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
