@@ -122,27 +122,26 @@ Ensure you have [Node.js](https://nodejs.org/) (v18 or higher) installed on your
 
 ## ☁️ Deployment Guide
 
-This application is designed to be built in **Google AI Studio App Build**, version-controlled in **GitHub**, and automatically deployed via **Cloudflare Pages**[cite: 1, 2].
+This application is designed to be built in **Google AI Studio App Build**, version-controlled in **GitHub**, and automatically deployed via **Cloudflare Pages**.
 
 ### Step 1: Export to GitHub from Google AI Studio
-1. In Google AI Studio App Build, use the direct **GitHub Connection** feature[cite: 1, 2].
-2. Link your approved GitHub repository to push the generated source code (including `package.json`, `src/`, and config files) directly[cite: 1, 2].
+1. In Google AI Studio App Build, use the direct **GitHub Connection** feature.
+2. Link your approved GitHub repository to push the generated source code (including `package.json`, `src/`, and config files) directly.
 
 ### Step 2: Deploy to Cloudflare Pages
-1. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com/) and navigate to **Workers & Pages**[cite: 2].
-2. Click **Create Application** > **Pages** > **Connect to Git**[cite: 2].
-3. Select your synchronized GitHub repository and choose the `main` branch[cite: 2].
-4. Configure the build settings as follows[cite: 1, 2]:
-   - **Framework Preset**: `Vite / React`[cite: 2]
-   - **Build Command**: `npm run build`[cite: 1, 2]
-   - **Build Output Directory**: `dist`[cite: 1, 2]
-   - **Node.js Version**: `18.x` or higher (configured under Environment Variables if needed)[cite: 2]
-5. Click **Save and Deploy**[cite: 2].
+1. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com/) and navigate to **Workers & Pages**.
+2. Click **Create Application** > **Pages** > **Connect to Git**.
+3. Select your synchronized GitHub repository and choose the `main` branch.
+4. Configure the build settings as follows:
+   - **Framework Preset**: `Vite / React`
+   - **Build Command**: `npm run build`
+   - **Build Output Directory**: `dist`
+   - **Node.js Version**: `18.x` or higher (configured under Environment Variables if needed)
+5. Click **Save and Deploy**.
 
 ### Step 3: SPA Routing Fix (Optional)
-If refreshing non-root pages returns a 404, create a `public/_redirects` file with the following rule[cite: 2]:
-```text
-/* /index.html 200
+If refreshing non-root pages returns a 404, create a `public/_redirects` file with the following rule:
+```/index.html 200```
 
 ## 📄 License
 
